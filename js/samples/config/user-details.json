@@ -1,0 +1,27 @@
+{
+	"validationsets":[
+		{"name":"userdetails", "fields":[
+			{"name":"firstname", "field":"user.firstname", "type":"string", "validations":[
+				{"name":"mandatory", "value":true},
+				{"name":"regex", "value":{"types":["alpha","latin"]}, "additionalchars":"' "},
+				{"name":"maxlength", "length":24}
+			]},
+			{"name":"lastname", "field":"user.lastname", "type":"string", "validations":[
+				{"name":"standardname"}
+			]},
+			{"name":"dob", "field":"user.dateofbirth", "type":"date", "validations":[
+				{"name":"mandatory", "value":true},
+				{"name":"noyoungerthan", "value":18, "datepart":"years"}
+			]}
+		]}
+	],
+
+	"compositevalidations":[
+		{"name": "standardname", "type":"string", "validations":[
+			{"name":"mandatory", "value":true},
+			{"name":"regex", "value":{"types":["alpha","latin"]}, "additionalchars":"' "},
+			{"name":"maxlength", "length":24}
+
+		]}
+	]
+}

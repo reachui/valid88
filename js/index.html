@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script type="text/javascript" src="./inc/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./src/Valid88.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+<script>
+
+// var Valid88
+$.get('./samples/config/user-details.json', function(content)  {
+  Valid88.registerValidationSet(content);
+  doTests();
+});
+
+function doTests()  {
+
+    var user = {firstname:'Joe', lastname:'Bloggs', dob:new Date(1999, 11, 23)};
+    Valid88.testInput('userdetails', {user:user});
+
+}
+
+</script>
