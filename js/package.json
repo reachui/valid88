@@ -1,0 +1,31 @@
+{
+  "name": "valid88",
+  "version": "1.0.0",
+  "description": "Cross Platform Validation Framework",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "mocha": "^5.1.1",
+    "react-scripts": "^1.1.4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "build": "babel src -d build",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "valid88"
+  },
+  "author": "Val Cassidy",
+  "license": "MIT"
+}

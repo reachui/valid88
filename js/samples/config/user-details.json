@@ -7,11 +7,11 @@
 				{"name":"maxlength", "length":24}
 			]},
 			{"name":"lastname", "field":"user.lastname", "type":"string", "validations":[
-				{"name":"standardname"}
+				{"name":"standardname", "composite":true}
 			]},
 			{"name":"dob", "field":"user.dateofbirth", "type":"date", "validations":[
 				{"name":"mandatory", "value":true},
-				{"name":"noyoungerthan", "value":18, "datepart":"years"}
+				{"name":"date", "type":"noyoungerthan", "value":18, "datepart":"years"}
 			]}
 		]}
 	],

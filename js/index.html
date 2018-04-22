@@ -1,7 +1,7 @@
 <html>
   <head>
     <script type="text/javascript" src="./inc/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="./src/Valid88.js"></script>
+    <script type="text/javascript" src="./build/core/Valid88.js"></script>
   </head>
   <body>
   </body>
@@ -17,7 +17,7 @@ $.get('./samples/config/user-details.json', function(content)  {
 function doTests()  {
 
     var user = {firstname:'Joe', lastname:'Bloggs', dob:new Date(1999, 11, 23)};
-    Valid88.testInput('userdetails', {user:user});
+    Valid88.validateInput('userdetails', {user:user});
 
 }
 
